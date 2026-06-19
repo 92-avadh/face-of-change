@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #0F172A;
+  --color-forest: #166534;
+  --color-gold: #F59E0B;
+  --color-beige: #FAF7F2;
+
+  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-sans: var(--font-inter), sans-serif;
+}
+
+
+
+body {
+  overflow-x: hidden;
+}
+
+/* Custom utility for typography letter spacing or before-after custom classes */
+@utility text-shadow-sm {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+@utility text-shadow-md {
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
