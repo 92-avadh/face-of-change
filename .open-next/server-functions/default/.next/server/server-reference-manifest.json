@@ -1,0 +1,84 @@
+{
+  "node": {
+    "4044dcc4aeb65c9253118f2b0c79e36d3d0822bd49": {
+      "workers": {
+        "app/about/page": {
+          "moduleId": 21490,
+          "async": false,
+          "exportedName": "subscribeToNewsletter",
+          "filename": "src/app/actions.ts"
+        },
+        "app/contact/page": {
+          "moduleId": 94391,
+          "async": false,
+          "exportedName": "subscribeToNewsletter",
+          "filename": "src/app/actions.ts"
+        },
+        "app/impact/page": {
+          "moduleId": 96906,
+          "async": false,
+          "exportedName": "subscribeToNewsletter",
+          "filename": "src/app/actions.ts"
+        },
+        "app/media/page": {
+          "moduleId": 33165,
+          "async": false,
+          "exportedName": "subscribeToNewsletter",
+          "filename": "src/app/actions.ts"
+        },
+        "app/page": {
+          "moduleId": 32989,
+          "async": false,
+          "exportedName": "subscribeToNewsletter",
+          "filename": "src/app/actions.ts"
+        },
+        "app/projects/delhi/page": {
+          "moduleId": 83049,
+          "async": false,
+          "exportedName": "subscribeToNewsletter",
+          "filename": "src/app/actions.ts"
+        },
+        "app/projects/odisha/page": {
+          "moduleId": 32714,
+          "async": false,
+          "exportedName": "subscribeToNewsletter",
+          "filename": "src/app/actions.ts"
+        },
+        "app/projects/page": {
+          "moduleId": 69478,
+          "async": false,
+          "exportedName": "subscribeToNewsletter",
+          "filename": "src/app/actions.ts"
+        }
+      },
+      "filename": "src/app/actions.ts",
+      "exportedName": "subscribeToNewsletter"
+    },
+    "4051ef5093dddf31c93764d5c7162e6395fcebc36e": {
+      "workers": {
+        "app/contact/page": {
+          "moduleId": 94391,
+          "async": false,
+          "exportedName": "submitVolunteerForm",
+          "filename": "src/app/actions.ts"
+        }
+      },
+      "filename": "src/app/actions.ts",
+      "exportedName": "submitVolunteerForm"
+    },
+    "40f95d28166124c0221a2c866ace4d50b0e486ddab": {
+      "workers": {
+        "app/contact/page": {
+          "moduleId": 94391,
+          "async": false,
+          "exportedName": "submitContactOrPartnerForm",
+          "filename": "src/app/actions.ts"
+        }
+      },
+      "filename": "src/app/actions.ts",
+      "exportedName": "submitContactOrPartnerForm"
+    }
+  },
+  "edge": {},
+  "encryptionKey": "D2p7BMcvifO0ua+MPp9N5OUErFKGOb5rNmfpiEf4WNg="
+}
