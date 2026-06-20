@@ -136,21 +136,24 @@ export default function FeaturedProjects({ isOverview = false }: { isOverview?: 
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy/30 via-transparent to-transparent" />
                   
-                  {/* Location Badge (Top-Left overlay, from image reference 1) */}
-                  <span className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm text-navy text-[10px] uppercase font-bold tracking-widest px-3 py-1.5 rounded-full shadow-sm">
-                    📍 {project.location}
-                  </span>
+                  {/* Overlay Badges Container */}
+                  <div className="absolute top-4 left-4 right-4 flex flex-wrap items-center justify-between gap-2 pointer-events-none">
+                    {/* Location Badge (from image reference 1) */}
+                    <span className="bg-white/95 backdrop-blur-sm text-navy text-[10px] uppercase font-bold tracking-widest px-3 py-1.5 rounded-full shadow-sm pointer-events-auto">
+                      📍 {project.location}
+                    </span>
 
-                  {/* Corner tags overlays (Top-Right overlay, from image reference 3 style) */}
-                  <div className="absolute top-4 right-4 flex flex-wrap gap-1.5 max-w-[70%] justify-end">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="bg-forest/80 backdrop-blur-sm text-white text-[9px] font-semibold tracking-wider px-2 py-1 rounded-full uppercase"
-                      >
-                        {tag}
-                      </span>
-                    ))}
+                    {/* Corner tags overlays (from image reference 3 style) */}
+                    <div className="flex flex-wrap gap-1.5 justify-end pointer-events-auto">
+                      {project.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="bg-forest/80 backdrop-blur-sm text-white text-[9px] font-semibold tracking-wider px-2 py-1 rounded-full uppercase"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
 

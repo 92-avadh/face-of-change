@@ -133,7 +133,7 @@ export default function Hero() {
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="relative min-h-screen flex flex-col justify-between overflow-hidden bg-navy text-white pt-24"
+      className="relative min-h-screen flex flex-col justify-between overflow-hidden bg-navy text-white pt-20 pb-4 md:pt-24"
     >
       {/* Parallax Background Container */}
       <div
@@ -147,7 +147,7 @@ export default function Hero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-right md:object-[right_25%] select-none opacity-80"
+          className="object-cover object-[80%_center] md:object-[right_25%] select-none opacity-80"
         />
 
         {/* --- LAYER 2: HEAVY OVERLAYS --- 
@@ -156,7 +156,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/80 to-transparent z-10" />
         <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/40 to-transparent z-10" />
 
-        {/* --- LAYER 3: COLOR SPOTLIGHT REVEAL --- */}
+        {/* --- LAYER 3: COLOR spotlight REVEAL --- */}
         <div
           ref={spotlightRef}
           className="absolute inset-0 z-20 w-full h-full transition-opacity duration-500 ease-out spotlight-mask"
@@ -170,7 +170,7 @@ export default function Hero() {
             fill
             priority
             sizes="100vw"
-            className="object-cover object-right md:object-[right_25%] select-none opacity-100"
+            className="object-cover object-[80%_center] md:object-[right_25%] select-none opacity-100"
           />
           {/* Faint overlay inside the spotlight so white text doesn't disappear against the bright image */}
           <div className="absolute inset-0 bg-gradient-to-r from-navy/50 to-transparent z-10" />
@@ -178,7 +178,7 @@ export default function Hero() {
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex-grow flex flex-col justify-center w-full py-12 md:py-20 pointer-events-none">
+      <div className="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex-grow flex flex-col justify-center w-full py-6 sm:py-12 md:py-20 pointer-events-none">
         
         {/* Wrapper to re-enable pointer events for clickable inner content */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 w-full items-center flex-grow pointer-events-auto">
@@ -187,11 +187,11 @@ export default function Hero() {
             <div className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm">
               <Sparkles className="w-4 h-4 text-gold animate-pulse" />
               <span className="text-xs uppercase tracking-widest font-semibold text-white/90">
-                Together, We Can
+                We Empower
               </span>
             </div>
 
-            <h1 className="font-serif text-4xl sm:text-5xl md:text-6.5xl font-bold leading-[1.1] tracking-wide text-shadow-md">
+            <h1 className="font-serif text-3xl xs:text-3.5xl sm:text-5xl md:text-6.5xl font-bold leading-[1.1] tracking-wide text-shadow-md">
               Lighting Lives. <br />
               Transforming Communities. <br />
               Creating{" "}
@@ -199,13 +199,13 @@ export default function Hero() {
                 text="Futures."
                 hoverText="Changes."
                 className="inline-flex cursor-none select-none text-gold align-baseline"
-                textClassName="font-serif text-gold text-4xl sm:text-5xl md:text-6.5xl font-bold leading-[1.1] tracking-wide"
-                hoverTextClassName="font-serif text-navy text-4xl sm:text-5xl md:text-6.5xl font-bold leading-[1.1] tracking-wide"
+                textClassName="font-serif text-gold text-3xl xs:text-3.5xl sm:text-5xl md:text-6.5xl font-bold leading-[1.1] tracking-wide"
+                hoverTextClassName="font-serif text-navy text-3xl xs:text-3.5xl sm:text-5xl md:text-6.5xl font-bold leading-[1.1] tracking-wide"
                 circleClassName="bg-gold"
               />
             </h1>
 
-            <p className="text-base sm:text-lg text-white/80 max-w-xl font-normal leading-relaxed text-shadow-sm font-sans">
+            <p className="text-xs xs:text-sm sm:text-base md:text-lg text-white/80 max-w-xl font-normal leading-relaxed text-shadow-sm font-sans">
               We work in education, healthcare, renewable energy and community development to build a better, brighter and equitable India.
             </p>
           </div>
@@ -214,11 +214,11 @@ export default function Hero() {
         </div>
 
         {/* CTA Buttons & Stats Box Row */}
-        <div className="mt-10 md:mt-16 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 pt-8 border-t border-white/10 w-full z-40 pointer-events-auto">
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 flex-shrink-0">
+        <div className="mt-6 md:mt-16 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 pt-6 border-t border-white/10 w-full z-40 pointer-events-auto">
+          <div className="flex flex-row items-center justify-start gap-3 flex-wrap flex-shrink-0">
             <a
               href="#projects"
-              className="inline-flex items-center justify-center space-x-2 px-8 py-3.5 rounded-full bg-white text-navy font-semibold text-sm transition-all duration-300 hover:bg-white/95 hover:scale-105 shadow-lg group/btn"
+              className="inline-flex items-center justify-center space-x-2 px-5 py-3 rounded-full bg-white text-navy font-semibold text-xs sm:px-8 sm:py-3.5 sm:text-sm transition-all duration-300 hover:bg-white/95 hover:scale-105 shadow-lg group/btn"
             >
               <span>Explore Our Impact</span>
               <ArrowRight className="w-4 h-4 text-navy transition-transform duration-300 group-hover/btn:translate-x-1" />
@@ -226,7 +226,7 @@ export default function Hero() {
 
             <a
               href="#projects"
-              className="inline-flex items-center justify-center space-x-2 px-8 py-3.5 rounded-full border border-white/40 bg-transparent text-white font-semibold text-sm transition-all duration-300 hover:bg-white/10 hover:border-white/60 hover:scale-105 group/btn2"
+              className="inline-flex items-center justify-center space-x-2 px-5 py-3 rounded-full border border-white/40 bg-transparent text-white font-semibold text-xs sm:px-8 sm:py-3.5 sm:text-sm transition-all duration-300 hover:bg-white/10 hover:border-white/60 hover:scale-105 group/btn2"
             >
               <span>View Projects</span>
               <Play className="w-3.5 h-3.5 fill-white text-white transition-transform duration-300 group-hover/btn2:scale-110" />
@@ -234,8 +234,8 @@ export default function Hero() {
           </div>
 
           {/* Stats Box */}
-          <div className="w-full lg:w-auto bg-[#121212]/85 backdrop-blur-md border border-white/15 py-4 px-6 rounded-2xl shadow-xl lg:max-w-2xl">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 items-center">
+          <div className="w-full lg:w-auto bg-[#121212]/85 backdrop-blur-md border border-white/15 py-3 px-4 sm:py-4 sm:px-6 rounded-xl sm:rounded-2xl shadow-xl lg:max-w-2xl">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 items-center">
               {stats.map((stat, index) => {
                 const Icon = stat.icon;
                 return (
@@ -244,16 +244,16 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 15 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-                    className="flex items-center space-x-3 pl-2 first:pl-0 md:border-l md:border-white/10 md:first:border-0 md:pl-4"
+                    className="flex items-center space-x-2.5 sm:space-x-3 pl-1.5 first:pl-0 md:border-l md:border-white/10 md:first:border-0 md:pl-4"
                   >
-                    <div className={`p-2 rounded-xl bg-white/5 border border-white/10 ${stat.color} flex-shrink-0`}>
-                      <Icon className="w-4 h-4" />
+                    <div className={`p-1.5 sm:p-2 rounded-lg sm:rounded-xl bg-white/5 border border-white/10 ${stat.color} flex-shrink-0`}>
+                      <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                     </div>
                     <div className="min-w-0">
-                      <div className="text-lg sm:text-xl font-bold tracking-tight font-serif text-white leading-none mb-1">
+                      <div className="text-base sm:text-xl font-bold tracking-tight font-serif text-white leading-none mb-1">
                         {stat.value}
                       </div>
-                      <div className="text-[9px] text-white/50 font-semibold uppercase tracking-wider leading-snug truncate">
+                      <div className="text-[8px] sm:text-[9px] text-white/50 font-semibold uppercase tracking-wider leading-snug truncate">
                         {stat.label}
                       </div>
                     </div>

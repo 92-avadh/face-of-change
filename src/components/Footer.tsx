@@ -75,6 +75,9 @@ export default function Footer() {
                 <span className="font-serif text-lg font-bold tracking-wide text-white">
                   Face of Change
                 </span>
+                <span className="text-[9px] uppercase font-bold tracking-[0.25em] text-white/40 -mt-0.5 leading-none">
+                  We Empower
+                </span>
               </div>
             </Link>
             <p className="text-white/60 text-sm leading-relaxed max-w-sm">

@@ -63,6 +63,11 @@ export default function Navbar() {
                 }`}>
                   Face of Change
                 </span>
+                <span className={`text-[9px] uppercase font-bold tracking-[0.25em] -mt-0.5 leading-none transition-colors duration-400 ${
+                  isHome ? "text-white/40 group-hover:text-gold/60" : "text-navy/40 group-hover:text-forest/60"
+                }`}>
+                  We Empower
+                </span>
               </div>
             </Link>
 
