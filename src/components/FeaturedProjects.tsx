@@ -6,6 +6,7 @@ import { ArrowRight, Sun, Users, Activity, Globe, Zap, Heart } from "lucide-reac
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { MagneticText } from "@/components/ui/morphing-cursor";
 
 function AnimatedReadMoreButton({ href }: { href: string }) {
   const [isClicked, setIsClicked] = useState(false);
@@ -95,7 +96,15 @@ export default function FeaturedProjects({ isOverview = false }: { isOverview?: 
               Our Initiatives
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-navy leading-tight">
-              Featured Projects Making Real Difference.
+              Featured Projects Making Real{" "}
+              <MagneticText
+                text="Difference."
+                hoverText="Impact."
+                className="inline-flex cursor-none select-none text-forest align-baseline"
+                textClassName="font-serif text-forest text-3xl sm:text-4xl md:text-5xl font-bold leading-tight"
+                hoverTextClassName="font-serif text-white text-3xl sm:text-4xl md:text-5xl font-bold leading-tight"
+                circleClassName="bg-forest"
+              />
             </h2>
           </div>
           <p className="text-navy/60 text-sm sm:text-base max-w-xs mt-4 md:mt-0 leading-relaxed">

@@ -4,6 +4,7 @@ import React from "react";
 import { AlertCircle, Zap, ShieldCheck, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { MagneticText } from "@/components/ui/morphing-cursor";
 
 export default function WhyWeExist() {
   const steps = [
@@ -47,7 +48,25 @@ export default function WhyWeExist() {
               Why We Exist
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-navy leading-tight">
-              We Envision An India Where Every Child Has The Chance To Dream And Achieve.
+              We{" "}
+              <MagneticText
+                text="Envision"
+                hoverText="Empower"
+                className="inline-flex cursor-none select-none text-navy align-baseline"
+                textClassName="font-serif text-navy text-3xl sm:text-4xl md:text-5xl font-bold leading-tight"
+                hoverTextClassName="font-serif text-gold text-3xl sm:text-4xl md:text-5xl font-bold leading-tight"
+                circleClassName="bg-navy"
+              />{" "}
+              An India Where Every Child Has The Chance To{" "}
+              <MagneticText
+                text="Dream"
+                hoverText="Fly"
+                className="inline-flex cursor-none select-none text-forest align-baseline"
+                textClassName="font-serif text-forest text-3xl sm:text-4xl md:text-5xl font-bold leading-tight"
+                hoverTextClassName="font-serif text-white text-3xl sm:text-4xl md:text-5xl font-bold leading-tight"
+                circleClassName="bg-forest"
+              />{" "}
+              And Achieve.
             </h2>
           </div>
           <div className="lg:col-span-5">

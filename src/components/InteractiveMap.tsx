@@ -279,6 +279,22 @@ export default function InteractiveMap() {
                 ))}
               </div>
             </div>
+
+            {/* Floating Cursor Tooltip */}
+            <AnimatePresence>
+              {hoveredState && (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  transition={{ duration: 0.1 }}
+                  style={{ left: tooltipPos.x, top: tooltipPos.y }}
+                  className="absolute bg-white/95 backdrop-blur-sm text-navy px-3 py-1.5 rounded-lg shadow-md border border-navy/10 text-xs font-semibold pointer-events-none z-50 transition-all duration-75"
+                >
+                  {hoveredState}
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         </div>
 
@@ -321,22 +337,6 @@ export default function InteractiveMap() {
         </div>
 
       </div>
-
-      {/* Floating Cursor Tooltip */}
-      <AnimatePresence>
-        {hoveredState && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
-            transition={{ duration: 0.1 }}
-            style={{ left: tooltipPos.x, top: tooltipPos.y }}
-            className="absolute bg-white/95 backdrop-blur-sm text-navy px-3 py-1.5 rounded-lg shadow-md border border-navy/10 text-xs font-semibold pointer-events-none z-50 transition-all duration-75"
-          >
-            {hoveredState}
-          </motion.div>
-        )}
-      </AnimatePresence>
     </section>
   );
 }
