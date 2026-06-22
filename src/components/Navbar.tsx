@@ -29,13 +29,17 @@ export default function Navbar() {
     { name: "Contact", href: "/contact" },
   ];
 
+  const isHome = pathname === "/";
+
   return (
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-          isScrolled
-            ? "bg-navy/90 backdrop-blur-xl border-b border-white/10 py-2.5 shadow-[0_8px_32px_rgba(0,0,0,0.25)]"
-            : "bg-gradient-to-b from-navy/60 to-transparent py-5"
+          isHome
+            ? isScrolled
+              ? "bg-navy/90 backdrop-blur-xl border-b border-white/10 py-2.5 shadow-[0_8px_32px_rgba(0,0,0,0.25)]"
+              : "bg-gradient-to-b from-navy/60 to-transparent py-5"
+            : "bg-navy/90 backdrop-blur-xl border-b border-white/10 py-2.5 shadow-[0_8px_32px_rgba(0,0,0,0.25)]"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
